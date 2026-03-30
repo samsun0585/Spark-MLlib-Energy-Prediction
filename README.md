@@ -1,3 +1,14 @@
+Using the Appliances Energy Prediction dataset found at https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction :
+Load the data into a Spark Dataframe and drop the date column. Display the first 10 rows. 
+Perform basic EDA (summary statistics + correlation insights) and print the results.
+Split into 75/25 train-test sets (establish a random seed).
+Use the Pipeline API with:
+VectorAssembler to combine continuous features
+LinearRegression to predict Appliances
+Report:
+Print the R-squared and RMSE on the test set
+Print the top 5 most important features (based on absolute coefficients)
+
 This assignment focuses on building a machine learning model using Spark MLlib to predict energy consumption (Appliances).
 
 First, the dataset is loaded into a Spark DataFrame, and the date column is removed since it is not needed for prediction. The first few rows are displayed to understand the structure of the data.
@@ -11,3 +22,5 @@ After that, a machine learning pipeline is created. A VectorAssembler is used to
 Finally, the model is evaluated on the test dataset. R-squared and RMSE are calculated to measure the model performance. R-squared shows how well the model explains the data, and RMSE shows the average prediction error. The most important features are also identified based on the model coefficients, which helps to understand which variables have the biggest impact on the prediction.
 
 Overall, this assignment demonstrates the end-to-end process of data preprocessing, model building, and evaluation using Spark MLlib.
+
+
